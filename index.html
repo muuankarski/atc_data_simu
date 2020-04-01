@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Reseptilääkkeiden ostot ATC-luokituksen mukaisesti - Avoin data</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="http://getskeleton.com/dist/css/normalize.css">
+  <link rel="stylesheet" href="http://getskeleton.com/dist/css/skeleton.css">
+  <link rel="stylesheet" href="http://getskeleton.com/css/custom.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="http://getskeleton.com/css/github-prettify-theme.css">
+  <script src="http://getskeleton.com/js/site.js"></script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="http://getskeleton.com/dist/images/favicon.png">
+  
+  
+  <style>
+  
+      .pull-right-lg {
+        float: right;
+        position: relative;
+        padding-top: 10px;
+    }
+    
+    /* Smaller than phone */
+@media (max-width: 749px) {
+  /* Navbar */
+  .navbar + .docs-section {
+    border-top-width: 0; }
+  .navbar,
+  .navbar-spacer {
+    display: block;
+    width: 100%;
+    height: 4.5rem;
+    background: #fff;
+    z-index: 99;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee; }
+  .navbar-spacer {
+    display: none; }
+  .navbar > .container {
+    width: 100%; }
+  .navbar-list {
+    list-style: none;
+    margin-bottom: 0; }
+  .navbar-item {
+    position: relative;
+    float: left;
+    margin-bottom: 0; }
+  .navbar-link {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .2rem;
+    margin-right: 35px;
+    text-decoration: none;
+    line-height: 6.5rem;
+    color: #222; }
+  .navbar-link.active {
+    color: #33C3F0; }
+  .has-docked-nav .navbar {
+    position: fixed;
+    top: 0;
+    left: 0; }
+  .has-docked-nav .navbar-spacer {
+    display: block; }
+  /* Re-overiding the width 100% declaration to match size of % based container */
+  .has-docked-nav .navbar > .container {
+    width: 80%; }
+}
+    
+  </style>
+  
+  
+
+</head>
+<body class="code-snippets-visible">
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+
+    <div class="navbar-spacer"></div>
+    <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a class="navbar-link" href="/"><i class="fa fa-home fa-2x"></i></a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#data">Data</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#esimerkit">Esimerkit</a></li>
+          <li class="pull-right-lg">
+            <img src="https://www.kela.fi/image/layout_set_logo?img_id=2174196&t=1585229282595" style = "height: 32px;"></li>
+        </ul>
+      </div>
+    </nav>
+
+<br/>
+<h4>Reseptilääkkeiden ostot ATC-luokituksen mukaisesti</h4>
+
+<div class="docs-section" id="intro">
+<h5 class="docs-header">Johdanto</h5>
+
+<p>Eli tähän tulisi johdanto eli sama dokumentaatio datasta kuin sovelluksessa</p>
+
+</div>
+    
+    
+    
+<div class="docs-section" id="data">
+<h5 class="docs-header">Data</h5>
+
+<a href='data.csv'>Lataa data</a><br/><a href='metadata.csv'>Lataa metadata</a>
+
+</div>
+    
+    
+<div class="docs-section" id="esimerkit">
+<h5 class="docs-header">Esimerkit</h5>
+
+<div class="docs-example">
+<pre>
+<code>
+
+df <- readr::read_csv2('https://kelaresearchandanalytics.github.io/atc_data_simu/data.csv')
+head(df)
+#  vuosi atc   atc_selite           viikko   arvo  taso alue       aluekoodi sysdate            
+#  <dbl> <chr> <chr>                 <dbl>  <dbl> <dbl> <chr>          <dbl> <dttm>             
+#1  2019 A     A A A  selite taso 1      1 18421.     1 Ahvenanmaa         0 2020-03-31 17:00:03
+#2  2019 A     A A A  selite taso 1      2 24384.     1 Ahvenanmaa         0 2020-03-31 17:00:03
+#3  2019 A     A A A  selite taso 1      3 24072.     1 Ahvenanmaa         0 2020-03-31 17:00:03
+#4  2019 A     A A A  selite taso 1      4 27529      1 Ahvenanmaa         0 2020-03-31 17:00:03
+#5  2019 A     A A A  selite taso 1      5 25659      1 Ahvenanmaa         0 2020-03-31 17:00:03
+#6  2019 A     A A A  selite taso 1      6 20214.     1 Ahvenanmaa         0 2020-03-31 17:00:03
+
+meta <- readr::read_csv2('https://kelaresearchandanalytics.github.io/atc_data_simu/metadata.csv')
+head(meta)
+
+
+</code>
+</pre>
+</div>
+
+</div>
+
+</div>
+</body>
+</html>

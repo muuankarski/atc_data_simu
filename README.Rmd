@@ -1,0 +1,21 @@
+---
+output: github_document
+---
+
+```{r, echo = FALSE, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+<br/>
+
+<img align="right" height="32px" src="https://www.kela.fi/image/layout_set_logo?img_id=2174196&t=1585229282595">
+
+
+```{r}
+df <- readr::read_csv2('https://github.com/muuankarski/atc_simu_data/raw/master/data.csv')
+```
+
